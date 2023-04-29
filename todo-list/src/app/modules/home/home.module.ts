@@ -8,6 +8,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { CommonModule } from '@angular/common';
     TodoListComponent,
     HomeComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
 })
 export class HomeModule {}
