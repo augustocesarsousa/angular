@@ -1,6 +1,6 @@
 <poke-search (emmitSearch)="filterPokemonList($event)"></poke-search>
 
-<section class="listing">
+<section class="listing" *ngIf="!apiError">
   <ng-template ngFor let-pokemon [ngForOf]="getPokemonList">
     <a
       [routerLink]="['details', pokemon.status.id]"
@@ -26,3 +26,10 @@
     </a>
   </ng-template>
 </section>
+
+<img
+  src="assets/error.png"
+  alt="Deu erro na mostragem do pokemon"
+  width="100%"
+  *ngIf="apiError"
+/>
