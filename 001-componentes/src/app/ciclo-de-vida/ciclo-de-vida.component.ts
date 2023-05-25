@@ -1,6 +1,7 @@
 import {
   AfterContentChecked,
   AfterContentInit,
+  AfterViewChecked,
   AfterViewInit,
   Component,
   DoCheck,
@@ -23,7 +24,8 @@ export class CicloDeVidaComponent
     DoCheck,
     AfterContentInit,
     AfterContentChecked,
-    AfterViewInit
+    AfterViewInit,
+    AfterViewChecked
 {
   @Input() public txtOnChanges: string = '';
   public valor: number = 1;
@@ -87,6 +89,15 @@ export class CicloDeVidaComponent
    */
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit foi executado!');
+  }
+
+  /**
+   * Este evento é executado sempre que um
+   * determinado componente foi verificado pelo
+   * algorotmo de detecção do alterações do Angular
+   */
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked foi executado!');
   }
 
   public adicionar(): void {
