@@ -1,6 +1,7 @@
 import {
   AfterContentChecked,
   AfterContentInit,
+  AfterViewInit,
   Component,
   DoCheck,
   Input,
@@ -16,7 +17,13 @@ import { __importDefault } from 'tslib';
   styleUrls: ['./ciclo-de-vida.component.scss'],
 })
 export class CicloDeVidaComponent
-  implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked
+  implements
+    OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit
 {
   @Input() public txtOnChanges: string = '';
   public valor: number = 1;
@@ -72,6 +79,14 @@ export class CicloDeVidaComponent
    */
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked foi executado!');
+  }
+
+  /**
+   * Este evento é executado quando a visualização
+   * do componente foi totalmente inicializada
+   */
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit foi executado!');
   }
 
   public adicionar(): void {
