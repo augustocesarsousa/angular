@@ -14,6 +14,7 @@ import { __importDefault } from 'tslib';
 })
 export class CicloDeVidaComponent implements OnInit, OnChanges {
   @Input() public txtOnChanges: string = '';
+  public valor: number = 1;
 
   /**
    * Este evento é iniciado após o Angular
@@ -39,5 +40,18 @@ export class CicloDeVidaComponent implements OnInit, OnChanges {
    */
   ngOnChanges(): void {
     console.log('ngOnChanges foi executado!');
+  }
+
+  /**
+   * Este evento é disparado sempre que as
+   * propriedades de entrada de um
+   * componente são verificadas
+   */
+  ngDoCheck(): void {
+    console.log('ngDoCheck foi executado!');
+  }
+
+  public adicionar(): void {
+    this.valor += 1;
   }
 }
