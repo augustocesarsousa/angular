@@ -1,4 +1,5 @@
 import {
+  AfterContentChecked,
   AfterContentInit,
   Component,
   DoCheck,
@@ -15,7 +16,7 @@ import { __importDefault } from 'tslib';
   styleUrls: ['./ciclo-de-vida.component.scss'],
 })
 export class CicloDeVidaComponent
-  implements OnInit, OnChanges, DoCheck, AfterContentInit
+  implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked
 {
   @Input() public txtOnChanges: string = '';
   public valor: number = 1;
@@ -62,6 +63,15 @@ export class CicloDeVidaComponent
    */
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit foi executado!');
+  }
+
+  /**
+   * Este evento é executado sempre que o
+   * conteúdo do componete é verificado pelo mecanismo
+   * de detecção de alteração do Angular
+   */
+  ngAfterContentChecked(): void {
+    console.log('ngAfterContentChecked foi executado!');
   }
 
   public adicionar(): void {
