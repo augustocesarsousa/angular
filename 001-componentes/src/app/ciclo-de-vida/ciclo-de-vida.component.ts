@@ -1,11 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
+import { __importDefault } from 'tslib';
 
 @Component({
   selector: 'app-ciclo-de-vida',
   templateUrl: './ciclo-de-vida.component.html',
   styleUrls: ['./ciclo-de-vida.component.scss'],
 })
-export class CicloDeVidaComponent implements OnInit {
+export class CicloDeVidaComponent implements OnInit, OnChanges {
+  @Input() public txtOnChanges: string = '';
+
   /**
    * Este evento é iniciado após o Angular
    * exibir pela primeira vez as propriedades
@@ -17,5 +26,18 @@ export class CicloDeVidaComponent implements OnInit {
    */
   ngOnInit(): void {
     console.log('ngOnInit foi executado!');
+  }
+
+  /**
+   * Este evento é executado sempre que um
+   * valor de um controle de entrada dentro do
+   * componente é alterado
+   *
+   * Sempre que um componente recebe um
+   * dade através do @Imput() o ngOnChanges()
+   * é invocado
+   */
+  ngOnChanges(): void {
+    console.log('ngOnChanges foi executado!');
   }
 }
