@@ -31,3 +31,15 @@
 <h3>Exemplo</h3>
 <button (click)="evento()">Botão</button>
 <hr />
+<h2>Two-way Binding</h2>
+<p>
+  É a união do Property Binding com Event Binding, usado para ouvir eventos e
+  atualizar valores simultanemante entre os componentes pai e filho
+</p>
+<h3>No HTML</h3>
+<code>{{ exemploHTMLTwoWayBinding }}</code>
+<h3>Na Classe</h3>
+<code>{{ exemploClasseTwoWayBinding }}</code>
+<h3>Exemplo</h3>
+<input [(ngModel)]="txtTwoWayBinding" placeholder="Two Way Binding" />
+<p>{{ txtTwoWayBinding }}</p>

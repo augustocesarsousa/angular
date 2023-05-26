@@ -18,8 +18,12 @@ export class DataBindingComponent {
 
   public exemploHTMLEventBinding = '<button (click)="evento()">Botão</button>';
   public exemploClasseEventBinding = `public evento() {alert('Clicou no Botão!')}`;
-
   public evento() {
     alert('Clicou no Botão!');
   }
+
+  public exemploHTMLTwoWayBinding =
+    '<input [(ngModel)]="txtTwoWayBinding" placeholder="Two Way Binding" /><p>{{ txtTwoWayBinding }}</p>';
+  public exemploClasseTwoWayBinding = `public txtTwoWayBinding: string = 'Two Way Binding';`;
+  public txtTwoWayBinding: string = 'Two Way Binding';
 }
