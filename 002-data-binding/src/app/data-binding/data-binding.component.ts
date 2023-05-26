@@ -14,6 +14,12 @@ export class DataBindingComponent {
     '<button [disabled]="habilitarBotao">Habilitado</button>';
   public exemploClassePropertyBinding: string =
     'public habilitarBotao: boolean = true;';
+  public habilitarBotao: boolean = false;
 
-  public habilitarBotao: boolean = true;
+  public exemploHTMLEventBinding = '<button (click)="evento()">Botão</button>';
+  public exemploClasseEventBinding = `public evento() {alert('Clicou no Botão!')}`;
+
+  public evento() {
+    alert('Clicou no Botão!');
+  }
 }

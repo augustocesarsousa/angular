@@ -18,3 +18,16 @@
 <button [disabled]="habilitarBotao">Habilitado</button>
 <button [disabled]="!habilitarBotao">Desabilitado</button>
 <hr />
+<h2>Event Binding</h2>
+<p>
+  É a associação de eventos que permite você escutar e responder às ações do
+  usuário, como pressionamentos de tecla, movimentos do mouse, cliques, toques,
+  e etc.
+</p>
+<h3>No HTML</h3>
+<code>{{ exemploHTMLEventBinding }}</code>
+<h3>Na Classe</h3>
+<code>{{ exemploClasseEventBinding }}</code>
+<h3>Exemplo</h3>
+<button (click)="evento()">Botão</button>
+<hr />
