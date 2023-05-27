@@ -48,3 +48,21 @@
 </pre>
 <h4>Resultado</h4>
 <p [ngClass]="'exemplo-ng-class'">Exemplo ngClass</p>
+<h3>*ngStyle</h3>
+<p>Diretiva que adiciona ou remove um conjunto de estilos CSS.</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLNgStyle }}</pre>
+<h4>Na Classe</h4>
+<pre
+  >{{ exemploClasseNgStyle }}
+</pre>
+<h4>Resultado</h4>
+<div
+  [ngStyle]="{
+    height: exemploHeightNgStyle,
+    width: exemploWidthNgStyle,
+    background: exemploBlueNgStyle
+  }"
+>
+  <p [ngStyle]="{ color: exemploWhiteNgStyle }">Exemplo ngStyle</p>
+</div>

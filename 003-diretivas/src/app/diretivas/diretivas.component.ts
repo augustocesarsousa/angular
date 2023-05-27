@@ -43,4 +43,26 @@ export class DiretivasComponent {
     color: red;
   }
   `;
+
+  public exemploHTMLNgStyle: string = `
+  <div
+    [ngStyle]="{
+      height: exemploHeightNgStyle,
+      width: exemploWidthNgStyle,
+      background: exemploBlueNgStyle
+    }"
+  >
+    <p [ngStyle]="{ color: exemploWhiteNgStyle }">Exemplo ngStyle</p>
+  </div>
+  `;
+  public exemploClasseNgStyle: string = `
+  public exemploHeightNgStyle: string = '150px';
+  public exemploWidthNgStyle: string = '150px';
+  public exemploBlueNgStyle: string = 'blue';  
+  public exemploWhiteNgStyle: string = 'white';
+  `;
+  public exemploHeightNgStyle: string = '150px';
+  public exemploWidthNgStyle: string = '150px';
+  public exemploBlueNgStyle: string = 'blue';
+  public exemploWhiteNgStyle: string = 'white';
 }
