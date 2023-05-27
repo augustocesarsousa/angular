@@ -32,3 +32,19 @@
   <p *ngSwitchCase="true">Opção 1</p>
   <p *ngSwitchCase="false">Opção 2</p>
 </div>
+<hr />
+<h2>Diretivas de atributos</h2>
+<p>
+  São as diretivas que alteram a aparência ou comportamento de um elemento,
+  componente ou outra diretiva.
+</p>
+<h3>*ngClass</h3>
+<p>Diretiva que adiciona ou remove um conjunto de classes CSS.</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLDiretivaNgClass }}</pre>
+<h4>No CSS</h4>
+<pre
+  >{{ exemploCSSDiretivaNgClass }}
+</pre>
+<h4>Resultado</h4>
+<p [ngClass]="'exemplo-ng-class'">Exemplo ngClass</p>

@@ -34,4 +34,13 @@ export class DiretivasComponent {
   public condicaoNgFor: boolean = true;
   `;
   public condicaoNgSwitch: boolean = true;
+
+  public exemploHTMLDiretivaNgClass: string = `
+  <p [ngClass]="'exemplo-ng-class'">Exemplo ngClass</p>
+  `;
+  public exemploCSSDiretivaNgClass: string = `
+  .exemplo-ng-class {
+    color: red;
+  }
+  `;
 }
