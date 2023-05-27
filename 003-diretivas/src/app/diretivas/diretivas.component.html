@@ -6,18 +6,29 @@
 <h3>*ngIf</h3>
 <p>Diretiva condicional, cria ou descarta visualizações do modelo</p>
 <h4>No HTML</h4>
-<code>{{ exemploHTMLDiretivaNgIf }}</code>
+<pre>{{ exemploHTMLDiretivaNgIf }}</pre>
 <h4>Na Classe</h4>
-<code>{{ exemploClasseDiretivaNgIf }}</code>
+<pre>{{ exemploClasseDiretivaNgIf }}</pre>
 <h4>Resultado</h4>
 <p *ngIf="condicionalNgIf">Exemplo *ngIf</p>
 <h3>*ngFor</h3>
 <p>Diretiva de repetição, ela cria elementos baseada em uma lista.</p>
 <h4>No HTML</h4>
-<code>{{ exemploHTMLDiretivaNgFor }}</code>
+<pre>{{ exemploHTMLDiretivaNgFor }}</pre>
 <h4>Na Classe</h4>
-<code>{{ exemploClasseDiretivaNgFor }}</code>
+<pre>{{ exemploClasseDiretivaNgFor }}</pre>
 <h4>Resultado</h4>
 <ul>
   <li *ngFor="let item of listaNgFor">{{ item }}</li>
 </ul>
+<h3>*ngSwitch</h3>
+<p>Conjunto de diretivas que alternam entre visões alternativas.</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLDiretivaNgSwitch }}</pre>
+<h4>Na Classe</h4>
+<pre>{{ exemploClasseDiretivaNgSwitch }}</pre>
+<h4>Resultado</h4>
+<div [ngSwitch]="condicaoNgSwitch">
+  <p *ngSwitchCase="true">Opção 1</p>
+  <p *ngSwitchCase="false">Opção 2</p>
+</div>
