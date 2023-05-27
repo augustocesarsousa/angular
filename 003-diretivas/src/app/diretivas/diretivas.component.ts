@@ -11,4 +11,8 @@ export class DiretivasComponent {
   public exemploClasseDiretivaNgIf: string =
     'public condicionalNgIf: boolean = true;';
   public condicionalNgIf: boolean = true;
+
+  public exemploHTMLDiretivaNgFor: string = `<ul><li *ngFor="let item of listaNgFor">{{ item }}</li></ul>`;
+  public exemploClasseDiretivaNgFor: string = `public listaNgFor: Array<string> = ['Banana', 'Maçã', 'Laranja'];`;
+  public listaNgFor: Array<string> = ['Banana', 'Maçã', 'Laranja'];
 }
