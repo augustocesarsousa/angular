@@ -65,4 +65,13 @@ export class DiretivasComponent {
   public exemploWidthNgStyle: string = '150px';
   public exemploBlueNgStyle: string = 'blue';
   public exemploWhiteNgStyle: string = 'white';
+
+  public exemploHTMLNgModel: string = `
+  <input type="text" [(ngModel)]="textoNgModel" />
+  <span>&#32;{{ textoNgModel }}</span>
+  `;
+  public exemploClasseNgModel: string = `
+  public textoNgModel: string = '';
+  `;
+  public textoNgModel: string = 'teste NgModel';
 }

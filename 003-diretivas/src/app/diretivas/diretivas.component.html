@@ -66,3 +66,17 @@
 >
   <p [ngStyle]="{ color: exemploWhiteNgStyle }">Exemplo ngStyle</p>
 </div>
+<h3>ngModel</h3>
+<p>
+  Diretiva que adiciona vinculação de dados bidirecional a um elemento de
+  formulário HTML.
+</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLNgModel }}</pre>
+<h4>Na Classe</h4>
+<pre
+  >{{ exemploClasseNgModel }}
+</pre>
+<h4>Resultado</h4>
+<input type="text" [(ngModel)]="textoNgModel" />
+<span>&#32;{{ textoNgModel }}</span>
