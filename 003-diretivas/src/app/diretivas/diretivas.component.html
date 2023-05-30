@@ -102,3 +102,18 @@
 <ng-template ngFor let-item [ngForOf]="exemploNgTemplate">
   <p>{{ item }}</p>
 </ng-template>
+<hr />
+<h3>ng-content</h3>
+<p>
+  É a diretiva que cria elementos no HTML através de elementos informados no pai
+  do componente.
+</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLNgContent }}</pre>
+<h4>No pai</h4>
+<pre
+  >{{ exemploPaiNgContent }}
+</pre>
+<h4>Resultado</h4>
+<ng-content select="p"></ng-content>
+<ng-content select="hr"></ng-content>

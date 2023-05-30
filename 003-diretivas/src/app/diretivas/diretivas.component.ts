@@ -92,4 +92,15 @@ export class DiretivasComponent {
     'exemplo ng-template',
     'exemplo ng-template',
   ];
+
+  public exemploHTMLNgContent: string = `
+  <ng-content select="p"></ng-content>
+  <ng-content select="hr"></ng-content>
+  `;
+  public exemploPaiNgContent: string = `
+  <app-diretivas>
+    <p>Exemplo ng-content</p>
+    <hr />
+  </app-diretivas>
+  `;
 }
