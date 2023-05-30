@@ -117,3 +117,15 @@
 <h4>Resultado</h4>
 <ng-content select="p"></ng-content>
 <ng-content select="hr"></ng-content>
+<h3>Pipes</h3>
+<p>Pipe é um conjunto de diretivas que alteram a visualização de elementos.</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLPipe }}</pre>
+<h4>Na Classe</h4>
+<pre
+  >{{ exemploClassePipe }}
+</pre>
+<h4>Resultado</h4>
+<p>Pipe data = {{ exemploDataPipe | date : "dd/MM/yyyy" }}</p>
+<p>Pipe dinheiro = {{ exemploDinheiroPipe | currency }}</p>
+<p>Pipe upper case = {{ exemploUpperCasePipe | uppercase }}</p>

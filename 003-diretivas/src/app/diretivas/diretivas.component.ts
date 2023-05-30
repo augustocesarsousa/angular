@@ -103,4 +103,18 @@ export class DiretivasComponent {
     <hr />
   </app-diretivas>
   `;
+
+  public exemploHTMLPipe: string = `
+  <p>Pipe data = {{ exemploDataPipe | date : "dd/MM/yyyy" }}</p>
+  <p>Pipe dinheiro = {{ exemploDinheiroPipe | currency }}</p>
+  <p>Pipe upper case = {{ exemploUpperCasePipe | uppercase }}</p>
+  `;
+  public exemploClassePipe: string = `
+  public exemploDataPipe: Date = new Date();
+  public exemploDinheiroPipe: number = 999.9;
+  public exemploUpperCasePipe: string = 'uppercase pipe';
+  `;
+  public exemploDataPipe: Date = new Date();
+  public exemploDinheiroPipe: number = 999.9;
+  public exemploUpperCasePipe: string = 'uppercase pipe';
 }
