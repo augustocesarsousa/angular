@@ -3,6 +3,7 @@
   São as diretivas que moldam ou remodelam a estrutura do DOM, adicionando,
   removendo e manipulando os elementos do host aos quais estão anexados.
 </p>
+<hr />
 <h3>*ngIf</h3>
 <p>Diretiva condicional, cria ou descarta visualizações do modelo</p>
 <h4>No HTML</h4>
@@ -11,6 +12,7 @@
 <pre>{{ exemploClasseDiretivaNgIf }}</pre>
 <h4>Resultado</h4>
 <p *ngIf="condicionalNgIf">Exemplo *ngIf</p>
+<hr />
 <h3>*ngFor</h3>
 <p>Diretiva de repetição, ela cria elementos baseada em uma lista.</p>
 <h4>No HTML</h4>
@@ -21,6 +23,7 @@
 <ul>
   <li *ngFor="let item of listaNgFor">{{ item }}</li>
 </ul>
+<hr />
 <h3>*ngSwitch</h3>
 <p>Conjunto de diretivas que alternam entre visões alternativas.</p>
 <h4>No HTML</h4>
@@ -38,6 +41,7 @@
   São as diretivas que alteram a aparência ou comportamento de um elemento,
   componente ou outra diretiva.
 </p>
+<hr />
 <h3>*ngClass</h3>
 <p>Diretiva que adiciona ou remove um conjunto de classes CSS.</p>
 <h4>No HTML</h4>
@@ -48,6 +52,7 @@
 </pre>
 <h4>Resultado</h4>
 <p [ngClass]="'exemplo-ng-class'">Exemplo ngClass</p>
+<hr />
 <h3>*ngStyle</h3>
 <p>Diretiva que adiciona ou remove um conjunto de estilos CSS.</p>
 <h4>No HTML</h4>
@@ -66,6 +71,7 @@
 >
   <p [ngStyle]="{ color: exemploWhiteNgStyle }">Exemplo ngStyle</p>
 </div>
+<hr />
 <h3>ngModel</h3>
 <p>
   Diretiva que adiciona vinculação de dados bidirecional a um elemento de
@@ -78,5 +84,21 @@
   >{{ exemploClasseNgModel }}
 </pre>
 <h4>Resultado</h4>
-<input type="text" [(ngModel)]="textoNgModel" />
+<input type="text" [(ngModel)]="textoNgModel" placeholder="NgModel" />
 <span>&#32;{{ textoNgModel }}</span>
+<hr />
+<h3>ng-template</h3>
+<p>
+  É a diretiva que cria elementos no HTML podendo ser usado para fazer
+  verificações antes do DOM ser carregado.
+</p>
+<h4>No HTML</h4>
+<pre>{{ exemploHTMLNgTemplate }}</pre>
+<h4>Na Classe</h4>
+<pre
+  >{{ exemploClasseNgTemplate }}
+</pre>
+<h4>Resultado</h4>
+<ng-template ngFor let-item [ngForOf]="exemploNgTemplate">
+  <p>{{ item }}</p>
+</ng-template>

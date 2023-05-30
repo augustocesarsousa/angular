@@ -58,7 +58,7 @@ export class DiretivasComponent {
   public exemploClasseNgStyle: string = `
   public exemploHeightNgStyle: string = '150px';
   public exemploWidthNgStyle: string = '150px';
-  public exemploBlueNgStyle: string = 'blue';  
+  public exemploBlueNgStyle: string = 'blue';
   public exemploWhiteNgStyle: string = 'white';
   `;
   public exemploHeightNgStyle: string = '150px';
@@ -71,7 +71,25 @@ export class DiretivasComponent {
   <span>&#32;{{ textoNgModel }}</span>
   `;
   public exemploClasseNgModel: string = `
-  public textoNgModel: string = '';
+  public textoNgModel: string = 'teste NgModel';
   `;
   public textoNgModel: string = 'teste NgModel';
+
+  public exemploHTMLNgTemplate: string = `
+  <ng-template ngFor let-item [ngForOf]="exemploNgTemplate">
+    <p>{{ item }}</p>
+  </ng-template>
+  `;
+  public exemploClasseNgTemplate: string = `
+  public exemploNgTemplate: Array<string> = [
+    'exemplo ng-template',
+    'exemplo ng-template',
+    'exemplo ng-template',
+  ];
+  `;
+  public exemploNgTemplate: Array<string> = [
+    'exemplo ng-template',
+    'exemplo ng-template',
+    'exemplo ng-template',
+  ];
 }
