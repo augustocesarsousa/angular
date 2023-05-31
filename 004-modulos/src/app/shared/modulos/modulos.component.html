@@ -1,0 +1,41 @@
+<p>
+  Um module é um mecanismo para agrupar componentes, diretivas, pipes e serviços
+  relacionados, de forma a combinar com outros módulos para criar um aplicativo
+</p>
+<p>
+  Uma aplicação Angular pode ser pensada como um quera-cabeça, onde cada bloco
+  tem como objetivo forneccer uma funcionalidade ou recurso específico.
+</p>
+<p>
+  Construímos um software como se fosse um <b>quebra cabeça</b> e conforme esse
+  quebra cabeça cresce, fica difícil e oneroso a sua manutenção.
+</p>
+<p>Por isso adotamos alguns modelos de arquitetura e construção de software.</p>
+<p>
+  O Angular fornece uma boa maneira de organizar esses blocos de forma simples e
+  eficaz usando <b>módulos</b>.
+</p>
+<h2>Anatomia (ngModule)</h2>
+<pre>
+    {{ anatomiaNgModule }}
+</pre>
+<ul>
+  <li>
+    declarations: utilizado para declarar os componentes dentro do módulo;
+  </li>
+  <li>imports: importa funcionalidades de outros componentes;</li>
+  <li>exports: exporta os componentes do módulo;</li>
+  <li>providers: utilizado para declarar os <b>services</b>;</li>
+  <li>
+    bootstrap: utilizado apenas no componente principal para iniciar a
+    aplicação.
+  </li>
+</ul>
+<h2>Criando módulo <b>Shared</b></h2>
+<pre>{{ criandoModulo }}</pre>
+<h2>Declarando os componentes</h2>
+<pre>{{ declarandoComponentes }}</pre>
+<h2>Exportando componentes</h2>
+<pre>{{ exportandoComponentes }}</pre>
+<h2>Adicionando módulo Shared no módulo principal</h2>
+<pre>{{ adicionandoModuloNoAppModulo }}</pre>
