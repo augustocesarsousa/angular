@@ -1,3 +1,8 @@
 <app-title></app-title>
 <app-input-component [exemploInput]="'Exemplo @Input()'"></app-input-component>
+<app-output-component
+  (exemploFilhoOutput)="setTexto($event)"
+></app-output-component>
+<h3>Resultado</h3>
+<p>{{ exemploPaiOutput }}</p>
 <router-outlet></router-outlet>
