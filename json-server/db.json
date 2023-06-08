@@ -1,0 +1,20 @@
+{
+    "list-food": [
+        {
+            "id": 1,
+            "nome": "Alface"
+        },
+        {
+            "id": 2,
+            "nome": "Couve"
+        },
+        {
+            "id": 3,
+            "nome": "Brócolis"
+        },
+        {
+            "id": 4,
+            "nome": "Agrião"
+        }
+    ]
+}
