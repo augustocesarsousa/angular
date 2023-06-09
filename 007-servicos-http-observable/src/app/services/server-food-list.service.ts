@@ -11,8 +11,15 @@ export class ServerFoodListService {
 
   constructor(private http: HttpClient) {}
 
-  public getList(): Observable<Food> {
-    return this.http.get<Food>(this.baseUrl).pipe(
+  public getList(): Observable<Array<Food>> {
+    return this.http.get<Array<Food>>(this.baseUrl).pipe(
+      (res) => res,
+      (err) => err
+    );
+  }
+
+  public addList(value: string): Observable<Food> {
+    return this.http.post<Food>(this.baseUrl, { nome: value }).pipe(
       (res) => res,
       (err) => err
     );
