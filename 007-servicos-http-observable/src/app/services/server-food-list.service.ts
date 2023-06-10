@@ -24,4 +24,11 @@ export class ServerFoodListService {
       (err) => err
     );
   }
+
+  public editItemList(id: number, value: string): Observable<Food> {
+    return this.http.put<Food>(`${this.baseUrl}/${id}`, { nome: value }).pipe(
+      (res) => res,
+      (err) => err
+    );
+  }
 }

@@ -33,4 +33,11 @@ export class HttpComponent implements OnInit {
       this.foodItem = '';
     }
   }
+
+  public editItemList(id: number, value: string): void {
+    this.serverFoodListService.editItemList(id, value).subscribe({
+      next: (res) => this.getList(),
+      error: (err) => console.log(err),
+    });
+  }
 }
