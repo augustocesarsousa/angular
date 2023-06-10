@@ -11,5 +11,6 @@
       placeholder="Item"
       (keyup.enter)="editItemList(item.id, item.nome)"
     />
+    <button (click)="deleteItemList(item.id)">Delete</button>
   </li>
 </ul>

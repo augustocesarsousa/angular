@@ -31,4 +31,11 @@ export class ServerFoodListService {
       (err) => err
     );
   }
+
+  public deleteItemList(id: number): Observable<Food> {
+    return this.http.delete<Food>(`${this.baseUrl}/${id}`).pipe(
+      (res) => res,
+      (err) => err
+    );
+  }
 }

@@ -40,4 +40,11 @@ export class HttpComponent implements OnInit {
       error: (err) => console.log(err),
     });
   }
+
+  public deleteItemList(id: number): void {
+    this.serverFoodListService.deleteItemList(id).subscribe({
+      next: (res) => this.getList(),
+      error: (err) => console.log(err),
+    });
+  }
 }
