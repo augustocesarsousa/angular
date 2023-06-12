@@ -64,3 +64,26 @@
 </form>
 <br />
 {{ select.value | json }}
+<h2>Error</h2>
+<form #error="ngForm">
+  <label>
+    Nome:
+    <input
+      type="text"
+      name="nome"
+      #nome="ngModel"
+      [ngModel]="nome.value"
+      required
+    />
+    <span
+      *ngIf="!nome.valid && nome.dirty && nome.touched"
+      [ngStyle]="{ color: 'red' }"
+    >
+      Invalid</span
+    >
+  </label>
+</form>
+<br />
+<P>Valid: {{ nome.valid | json }}</P>
+<P>Touched: {{ nome.touched | json }}</P>
+<P>Dirty: {{ nome.dirty | json }}</P>
