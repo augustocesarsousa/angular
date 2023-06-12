@@ -1,5 +1,5 @@
 <h2>Imput</h2>
-<form #form="ngForm">
+<form #imput="ngForm">
   <label>
     Nome:
     <input type="text" name="nome" ngModel />
@@ -14,4 +14,21 @@
   </label>
 </form>
 <br />
-{{ form.value | json }}
+{{ imput.value | json }}
+<h2>Imput radio</h2>
+<form #imputRadio="ngForm">
+  <label>
+    <input type="radio" name="genero" value="Masculino" ngModel />
+    Masculino:
+  </label>
+  <label>
+    <input type="radio" name="genero" value="Feminino" ngModel />
+    Feminino:
+  </label>
+  <label>
+    <input type="radio" name="genero" value="Outros" ngModel />
+    Outros:
+  </label>
+</form>
+<br />
+{{ imputRadio.value | json }}
