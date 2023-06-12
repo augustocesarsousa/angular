@@ -87,3 +87,94 @@
 <P>Valid: {{ nome.valid | json }}</P>
 <P>Touched: {{ nome.touched | json }}</P>
 <P>Dirty: {{ nome.dirty | json }}</P>
+<h2>Submit</h2>
+<form
+  #submit="ngForm"
+  [ngStyle]="{ display: 'flex', flexDirection: 'column' }"
+  (ngSubmit)="submitForm(submit)"
+>
+  <label>
+    Nome:
+    <input
+      type="text"
+      name="nome2"
+      #nome2="ngModel"
+      [ngModel]="nome2.value"
+      required
+    />
+    <span
+      *ngIf="!nome2.valid && nome2.dirty && nome2.touched"
+      [ngStyle]="{ color: 'red' }"
+    >
+      Invalid</span
+    >
+  </label>
+  <div>
+    <label>
+      <input
+        type="radio"
+        name="genero"
+        #genero="ngModel"
+        [ngModel]="genero.value"
+        value="Masculino"
+        required
+      />
+      Masculino:
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="genero"
+        #genero="ngModel"
+        [ngModel]="genero.value"
+        value="Feminino"
+        required
+      />
+      Feminino:
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="genero"
+        #genero="ngModel"
+        [ngModel]="genero.value"
+        value="Outros"
+        required
+      />
+      Outros:
+    </label>
+    <span
+      *ngIf="!genero.valid && genero.dirty && genero.touched"
+      [ngStyle]="{ color: 'red' }"
+    >
+      Invalid</span
+    >
+  </div>
+  <label>
+    Comidas:
+    <select
+      name="comidas"
+      #comidas="ngModel"
+      [ngModel]="comidas.value"
+      required
+    >
+      <option value="">Selecione...</option>
+      <option value="pizza">Pizza</option>
+      <option value="lasanha">Lasanha</option>
+      <option value="boloChocolate">Bodo de chocolate</option>
+      <option value="pudim">Pudim</option>
+    </select>
+    <span
+      *ngIf="!comidas.valid && comidas.dirty && comidas.touched"
+      [ngStyle]="{ color: 'red' }"
+    >
+      Invalid</span
+    >
+  </label>
+  <br />
+  <button [disabled]="submit.invalid" [ngStyle]="{ width: '100px' }">
+    Enviar dados
+  </button>
+</form>
+<p>Form: {{ submit.valid }}</p>
+{{ submit.value | json }}
