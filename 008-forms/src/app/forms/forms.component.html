@@ -1,0 +1,17 @@
+<h2>Imput</h2>
+<form #form="ngForm">
+  <label>
+    Nome:
+    <input type="text" name="nome" ngModel />
+  </label>
+  <label>
+    E-mail:
+    <input type="text" name="email" ngModel />
+  </label>
+  <label>
+    Idade:
+    <input type="number" name="idade" ngModel />
+  </label>
+</form>
+<br />
+{{ form.value | json }}
