@@ -49,3 +49,18 @@
 </form>
 <br />
 {{ checkbox.value | json }}
+<h2>Select</h2>
+<form #select="ngForm">
+  <label>
+    Comidas:
+    <select name="comidas" ngModel>
+      <option value="">Selecione...</option>
+      <option value="pizza">Pizza</option>
+      <option value="lasanha">Lasanha</option>
+      <option value="boloChocolate">Bodo de chocolate</option>
+      <option value="pudim">Pudim</option>
+    </select>
+  </label>
+</form>
+<br />
+{{ select.value | json }}
