@@ -32,3 +32,20 @@
 </form>
 <br />
 {{ imputRadio.value | json }}
+<h2>Checkbox</h2>
+<form #checkbox="ngForm">
+  <label>
+    <input type="checkbox" name="angular" ngModel />
+    Angular:
+  </label>
+  <label>
+    <input type="checkbox" name="react" ngModel />
+    React:
+  </label>
+  <label>
+    <input type="checkbox" name="vue" ngModel />
+    Vue:
+  </label>
+</form>
+<br />
+{{ checkbox.value | json }}
