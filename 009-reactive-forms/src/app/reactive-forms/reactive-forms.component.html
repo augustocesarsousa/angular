@@ -1,0 +1,16 @@
+<h1>Reactive Forms</h1>
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+  <label>
+    First name:
+    <input type="text" formControlName="firstName" />
+  </label>
+  <label>
+    Last name:
+    <input type="text" formControlName="lastName" />
+  </label>
+  <label>
+    E-mail:
+    <input type="text" formControlName="email" />
+  </label>
+  <button type="submit">Submit</button>
+</form>
