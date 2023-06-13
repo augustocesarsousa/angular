@@ -3,14 +3,44 @@
   <label>
     First name:
     <input type="text" formControlName="firstName" />
+    <span
+      *ngIf="
+        cadastroForm.get('firstName')?.invalid &&
+        (cadastroForm.get('firstName')?.touched ||
+          cadastroForm.get('firstName')?.dirty)
+      "
+      >Invalid</span
+    >
   </label>
   <label>
     Last name:
     <input type="text" formControlName="lastName" />
+    <span
+      *ngIf="
+        cadastroForm.get('lastName')?.invalid &&
+        (cadastroForm.get('lastName')?.touched ||
+          cadastroForm.get('lastName')?.dirty)
+      "
+      >Invalid</span
+    >
   </label>
   <label>
     E-mail:
     <input type="text" formControlName="email" />
+    <span
+      *ngIf="
+        cadastroForm.get('email')?.invalid &&
+        (cadastroForm.get('email')?.touched || cadastroForm.get('email')?.dirty)
+      "
+      >E-mail invalid</span
+    >
   </label>
-  <button type="submit">Submit</button>
+  <label>
+    Phone:
+    <input type="text" formControlName="phone" />
+    <span *ngIf="cadastroForm.get('phone')?.errors?.['pattern']"
+      >Phone invalid (00) 00000-0000</span
+    >
+  </label>
+  <button type="submit" [disabled]="cadastroForm.invalid">Submit</button>
 </form>
