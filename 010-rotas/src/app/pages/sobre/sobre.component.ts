@@ -13,6 +13,6 @@ export class SobreComponent implements OnInit {
     this.activatedRoute.params.subscribe((res) => console.log(res));
     this.activatedRoute.queryParams.subscribe((res) => console.log(res));
 
-    setInterval(() => this.router.navigate(['404']), 5000);
+    // setInterval(() => this.router.navigate(['404']), 5000);
   }
 }

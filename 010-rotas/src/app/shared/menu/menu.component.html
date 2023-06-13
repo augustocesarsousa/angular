@@ -11,6 +11,14 @@
       </li>
       <li>
         <a
+          routerLink="/dashboard"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Dashboard</a
+        >
+      </li>
+      <li>
+        <a
           routerLink="/sobre/1/augusto"
           [routerLinkActive]="['active']"
           [routerLinkActiveOptions]="{ exact: true }"

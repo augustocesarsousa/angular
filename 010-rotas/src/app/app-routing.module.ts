@@ -11,6 +11,11 @@ const routes: Routes = [
     component: SobreComponent,
     children: [{ path: ':id/:nome', component: SobreComponent }],
   },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
   { path: '404', component: PaginaNaoEncontradaComponent },
   { path: '**', redirectTo: '404' },
 ];
