@@ -6,7 +6,7 @@ import { PaginaNaoEncontradaComponent } from './pages/pagina-nao-encontrada/pagi
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'sobre', component: SobreComponent },
+  { path: 'sobre/:id/:nome', component: SobreComponent },
   { path: '404', component: PaginaNaoEncontradaComponent },
   { path: '**', redirectTo: '404' },
 ];
