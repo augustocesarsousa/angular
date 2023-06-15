@@ -17,7 +17,7 @@ export class BankingComponent {
     return this.carteira;
   }
 
-  public setPoupanca(value: string): number | undefined {
+  public setCarteira(value: string): number | undefined {
     const valor = Number(value);
     if (isNaN(valor) || this.poupanca < valor || valor <= 0) {
       return;
@@ -27,13 +27,13 @@ export class BankingComponent {
     return this.poupanca;
   }
 
-  public setCarteira(value: string): number | undefined {
+  public setPoupanca(value: string): number | undefined {
     const valor = Number(value);
     if (isNaN(valor) || this.carteira < valor || valor <= 0) {
       return;
     }
-    this.poupanca += valor;
     this.carteira -= valor;
+    this.poupanca += valor;
     return this.poupanca;
   }
 }

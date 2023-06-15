@@ -5,10 +5,10 @@
 <div>
   <p>Poupança: {{ getPoupanca | currency }}</p>
   <input type="text" #sacar />
-  <button (click)="setPoupanca(sacar.value)">Sacar</button>
+  <button (click)="setCarteira(sacar.value)">Sacar</button>
 </div>
 <div>
   <p>Carteira: {{ getCarteira | currency }}</p>
   <input type="text" #depositar />
-  <button (click)="setCarteira(depositar.value)">Depositar</button>
+  <button (click)="setPoupanca(depositar.value)">Depositar</button>
 </div>

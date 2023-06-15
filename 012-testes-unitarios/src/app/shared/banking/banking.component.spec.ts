@@ -26,4 +26,12 @@ describe('BankingComponent', () => {
   it('(U) getCarteira(): should return 20', () => {
     expect(component.getCarteira).toEqual(20);
   });
+
+  it('(U) setPoupanca(): should transfer from carteira to poupanca', () => {
+    component.setPoupanca('20');
+    fixture.detectChanges();
+
+    expect(component.getPoupanca).toEqual(120);
+    expect(component.getCarteira).toEqual(0);
+  });
 });
