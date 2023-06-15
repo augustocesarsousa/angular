@@ -8,7 +8,7 @@ describe('BankingComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BankingComponent]
+      declarations: [BankingComponent],
     });
     fixture = TestBed.createComponent(BankingComponent);
     component = fixture.componentInstance;
@@ -17,5 +17,9 @@ describe('BankingComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('(U) getPoupanca(): should return 100', () => {
+    expect(component.getPoupanca).toEqual(100);
   });
 });
