@@ -1,0 +1,14 @@
+<h2>Augusto Bank</h2>
+<p>Agência - 9999</p>
+<p>Conta - 99999-9</p>
+<br />
+<div>
+  <p>Poupança: {{ getPoupanca | currency }}</p>
+  <input type="text" #sacar />
+  <button (click)="setPoupanca(sacar.value)">Sacar</button>
+</div>
+<div>
+  <p>Carteira: {{ getCarteira | currency }}</p>
+  <input type="text" #depositar />
+  <button (click)="setCarteira(depositar.value)">Depositar</button>
+</div>
