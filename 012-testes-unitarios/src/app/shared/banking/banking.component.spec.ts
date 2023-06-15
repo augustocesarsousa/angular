@@ -22,4 +22,8 @@ describe('BankingComponent', () => {
   it('(U) getPoupanca(): should return 100', () => {
     expect(component.getPoupanca).toEqual(100);
   });
+
+  it('(U) getCarteira(): should return 20', () => {
+    expect(component.getCarteira).toEqual(20);
+  });
 });
