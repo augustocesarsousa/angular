@@ -50,4 +50,12 @@ describe('BankingComponent', () => {
     expect(component.getPoupanca).toEqual(0);
     expect(component.getCarteira).toEqual(120);
   });
+
+  it('(U) setCarteira(): should not transfer from poupanca to carteira when value isNaN or poupanca < value or value < 0', () => {
+    expect(component.setCarteira('test')).not.toBeTruthy();
+    expect(component.setCarteira('1000')).not.toBeTruthy();
+    expect(component.setCarteira('-1')).not.toBeTruthy();
+    expect(component.getPoupanca).toEqual(100);
+    expect(component.getCarteira).toEqual(20);
+  });
 });
