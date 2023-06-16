@@ -58,4 +58,21 @@ describe('BankingComponent', () => {
     expect(component.getPoupanca).toEqual(100);
     expect(component.getCarteira).toEqual(20);
   });
+
+  it('(I) setPoupanca(): should transfer from carteira to poupanca', () => {
+    let element = fixture.debugElement.nativeElement;
+
+    element.querySelector('#input-depositar').value = '10';
+    element.querySelector('#depositar').click();
+    fixture.detectChanges();
+
+    expect(element.querySelector('#valor-poupanca').textContent).toEqual(
+      '$110.00'
+    );
+    expect(element.querySelector('#valor-carteira').textContent).toEqual(
+      '$10.00'
+    );
+    expect(component.getPoupanca).toEqual(110);
+    expect(component.getCarteira).toEqual(10);
+  });
 });

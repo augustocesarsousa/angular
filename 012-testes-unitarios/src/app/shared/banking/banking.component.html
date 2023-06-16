@@ -3,12 +3,18 @@
 <p>Conta - 99999-9</p>
 <br />
 <div>
-  <p>Poupança: {{ getPoupanca | currency }}</p>
-  <input type="text" #sacar />
-  <button (click)="setCarteira(sacar.value)">Sacar</button>
+  <p>
+    Poupança: <span id="valor-poupanca">{{ getPoupanca | currency }}</span>
+  </p>
+  <input id="input-sacar" type="text" #sacar />
+  <button id="sacar" (click)="setCarteira(sacar.value)">Sacar</button>
 </div>
 <div>
-  <p>Carteira: {{ getCarteira | currency }}</p>
-  <input type="text" #depositar />
-  <button (click)="setPoupanca(depositar.value)">Depositar</button>
+  <p>
+    Carteira: <span id="valor-carteira">{{ getCarteira | currency }}</span>
+  </p>
+  <input id="input-depositar" type="text" #depositar />
+  <button id="depositar" (click)="setPoupanca(depositar.value)">
+    Depositar
+  </button>
 </div>
