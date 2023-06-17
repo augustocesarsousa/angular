@@ -7,6 +7,7 @@ import {
 import { InvestmentsService } from './investments.service';
 import { HttpClient } from '@angular/common/http';
 import { Investment } from '../models/investment';
+import { MOCK_LIST } from './investments-list.mock';
 
 describe('InvestmentsService', () => {
   let service: InvestmentsService;
@@ -16,28 +17,7 @@ describe('InvestmentsService', () => {
   const BASE_URL =
     'https://raw.githubusercontent.com/augustocesarsousa/angular/main/json-server/investiments.json';
 
-  const MOCK_LIST: Array<Investment> = [
-    {
-      name: 'Banco 1',
-      value: 1000,
-    },
-    {
-      name: 'Banco 2',
-      value: 2000,
-    },
-    {
-      name: 'Banco 3',
-      value: 3000,
-    },
-    {
-      name: 'Banco 4',
-      value: 4000,
-    },
-    {
-      name: 'Banco 5',
-      value: 5000,
-    },
-  ];
+  const mockList: Array<Investment> = MOCK_LIST;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -67,7 +47,7 @@ describe('InvestmentsService', () => {
     });
 
     const REQ = httpTestingController.expectOne(BASE_URL);
-    REQ.flush(MOCK_LIST);
+    REQ.flush(mockList);
 
     expect(REQ.request.method).toEqual('GET');
   });

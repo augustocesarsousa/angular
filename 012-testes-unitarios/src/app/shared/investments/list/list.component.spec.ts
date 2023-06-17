@@ -2,10 +2,16 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListComponent } from './list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MOCK_LIST } from '../../services/investments-list.mock';
+import { Investment } from '../../models/investment';
+import { InvestmentsService } from '../../services/investments.service';
+import { of } from 'rxjs';
 
 describe('ListComponent', () => {
   let component: ListComponent;
   let fixture: ComponentFixture<ListComponent>;
+  const mockList: Array<Investment> = MOCK_LIST;
+  let service: InvestmentsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -14,6 +20,7 @@ describe('ListComponent', () => {
     });
     fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
+    service = TestBed.inject(InvestmentsService);
     fixture.detectChanges();
   });
 
@@ -23,10 +30,19 @@ describe('ListComponent', () => {
 
   it('(U) should return investiments list', () => {
     let invetments = component.investimentList;
+    spyOn(service, 'getInvestments').and.returnValue(of(mockList));
 
-    expect(invetments.length).toEqual(4);
-    expect(invetments[0].name).toEqual('Bradesco');
-    expect(invetments[3].name).toEqual('Santander');
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    expect(service.getInvestments).toHaveBeenCalledWith();
+    expect(component.investimentList.length).toBe(5);
+    expect(component.investimentList[0].name).toEqual('Banco 1');
+    expect(component.investimentList[4].name).toEqual('Banco 5');
+
+    // expect(invetments.length).toEqual(4);
+    // expect(invetments[0].name).toEqual('Bradesco');
+    // expect(invetments[3].name).toEqual('Santander');
   });
 
   it('(I) should return investiments list', () => {
