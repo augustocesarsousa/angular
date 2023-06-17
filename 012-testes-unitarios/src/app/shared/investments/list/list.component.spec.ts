@@ -46,11 +46,16 @@ describe('ListComponent', () => {
   });
 
   it('(I) should return investiments list', () => {
+    spyOn(service, 'getInvestments').and.returnValue(of(mockList));
+
+    component.ngOnInit();
+    fixture.detectChanges();
+
     let invetments =
       fixture.debugElement.nativeElement.querySelectorAll('.investiment-item');
 
-    expect(invetments.length).toBe(4);
-    expect(invetments[0].textContent.trim()).toBe('Bradesco | $1,000.00');
-    expect(invetments[3].textContent.trim()).toBe('Santander | $3,230.00');
+    expect(invetments.length).toBe(5);
+    expect(invetments[0].textContent.trim()).toBe('Banco 1 | $1,000.00');
+    expect(invetments[4].textContent.trim()).toBe('Banco 5 | $5,000.00');
   });
 });
