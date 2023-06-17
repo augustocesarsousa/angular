@@ -12,7 +12,10 @@ export class InvestmentsService {
 
   constructor(private http: HttpClient) {}
 
-  public getInvestments(): Observable<Investment> {
-    return this.http.get<Investment>(this.baseUrl).pipe(map((res) => res));
+  public getInvestments(): Observable<Array<Investment>> {
+    return this.http.get<Array<Investment>>(this.baseUrl).pipe(
+      (res) => res,
+      (err) => err
+    );
   }
 }

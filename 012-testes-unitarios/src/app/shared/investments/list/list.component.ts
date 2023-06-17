@@ -8,24 +8,7 @@ import { InvestmentsService } from '../../services/investments.service';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  public investimentList: Array<Investment> = [
-    {
-      name: 'Bradesco',
-      value: 1000,
-    },
-    {
-      name: 'Banco do Brasil',
-      value: 1290,
-    },
-    {
-      name: 'Caixa',
-      value: 900,
-    },
-    {
-      name: 'Santander',
-      value: 3230,
-    },
-  ];
+  public investimentList: Array<Investment> = [];
 
   constructor(private investmentsService: InvestmentsService) {}
 
@@ -34,8 +17,9 @@ export class ListComponent implements OnInit {
   }
 
   public getInvestments(): void {
-    this.investmentsService
-      .getInvestments()
-      .subscribe((res) => console.log(res));
+    this.investmentsService.getInvestments().subscribe({
+      next: (res) => (this.investimentList = res),
+      error: (err) => console.log(err),
+    });
   }
 }
