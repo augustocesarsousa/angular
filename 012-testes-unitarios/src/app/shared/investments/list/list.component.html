@@ -1,0 +1,7 @@
+<hr />
+<h2>Ivestiments</h2>
+<ul>
+  <li *ngFor="let investiment of investimentList">
+    {{ investiment.name }} | {{ investiment.value | currency }}
+  </li>
+</ul>
