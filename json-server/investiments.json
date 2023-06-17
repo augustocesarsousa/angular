@@ -1,18 +1,18 @@
 [
     {
         "name": "Bradesco",
-        "value": 1000,
+        "value": 1000
     },
     {
         "name": "Banco do Brasil",
-        "value": 1290,
+        "value": 1290
     },
     {
         "name": "Caixa",
-        "value": 900,
+        "value": 900
     },
     {
         "name": "Santander",
-        "value": 3230,
-    },
+        "value": 3230
+    }
 ]
