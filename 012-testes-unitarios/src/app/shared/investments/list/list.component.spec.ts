@@ -26,4 +26,13 @@ describe('ListComponent', () => {
     expect(invetments[0].name).toEqual('Bradesco');
     expect(invetments[3].name).toEqual('Santander');
   });
+
+  it('(I) should return investiments list', () => {
+    let invetments =
+      fixture.debugElement.nativeElement.querySelectorAll('.investiment-item');
+
+    expect(invetments.length).toBe(4);
+    expect(invetments[0].textContent.trim()).toBe('Bradesco | $1,000.00');
+    expect(invetments[3].textContent.trim()).toBe('Santander | $3,230.00');
+  });
 });
