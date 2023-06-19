@@ -1,5 +1,5 @@
 import { CanDeactivateFn } from '@angular/router';
-import { AccountComponent } from '../account/account.component';
+import { AccountComponent } from '../pages/account/account.component';
 
 export const canDeactivateGuard: CanDeactivateFn<AccountComponent> = (
   component,

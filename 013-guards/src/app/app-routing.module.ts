@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './shared/home/home.component';
-import { AccountComponent } from './shared/account/account.component';
+import { HomeComponent } from './shared/pages/home/home.component';
+import { AccountComponent } from './shared/pages/account/account.component';
 import { canActivateGuard } from './shared/guards/can-activate.guard';
 import { canDeactivateGuard } from './shared/guards/can-deactivate.guard';
+import { canMatchGuard } from './shared/guards/can-match.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,12 @@ const routes: Routes = [
     component: AccountComponent,
     canActivate: [canActivateGuard],
     canDeactivate: [canDeactivateGuard],
+  },
+
+  {
+    path: 'core',
+    loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
+    canMatch: [canMatchGuard],
   },
 ];
 
