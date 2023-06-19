@@ -2,8 +2,12 @@
   <a routerLink="account" [queryParams]="{ user: 'admin', password: '1234' }">
     Account
   </a>
-  <a routerLink="core">Dashboard</a>
-  <a routerLink="core/leads">Leads</a>
+  <a routerLink="core" [queryParams]="{ user: 'admin', password: '1234' }"
+    >Dashboard</a
+  >
+  <a routerLink="core/leads" [queryParams]="{ user: 'admin', password: '1234' }"
+    >Leads</a
+  >
 </div>
 <h1>Guard</h1>
 <p>Home</p>

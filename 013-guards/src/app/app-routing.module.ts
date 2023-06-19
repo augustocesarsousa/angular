@@ -5,6 +5,7 @@ import { AccountComponent } from './shared/pages/account/account.component';
 import { canActivateGuard } from './shared/guards/can-activate.guard';
 import { canDeactivateGuard } from './shared/guards/can-deactivate.guard';
 import { canMatchGuard } from './shared/guards/can-match.guard';
+import { canActivateChildGuard } from './shared/guards/can-activate-child.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
     path: 'core',
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
     canMatch: [canMatchGuard],
+    canActivateChild: [canActivateChildGuard],
   },
 ];
 

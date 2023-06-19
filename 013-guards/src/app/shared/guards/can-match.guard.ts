@@ -4,7 +4,7 @@ export const canMatchGuard: CanMatchFn = (route, segments) => {
   console.log(route);
   console.log(segments);
 
-  if (segments[1]?.path === 'leads') {
+  if (segments[0]?.path === 'core') {
     return true;
   }
 
