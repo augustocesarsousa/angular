@@ -3,10 +3,15 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, catchError, map, throwError } from 'rxjs';
 
+import { JwtHelperService } from '@auth0/angular-jwt';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  static isAuthenticated() {
+    throw new Error('Method not implemented.');
+  }
   private url: string = 'http://localhost:3000';
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -32,5 +37,14 @@ export class AuthService {
   public logout() {
     localStorage.removeItem('access_token');
     return this.router.navigate(['']);
+  }
+
+  public isAuthenticated(): boolean {
+    const token = localStorage.getItem('access_token');
+
+    if (!token) return false;
+
+    const jwtHelper = new JwtHelperService();
+    return !jwtHelper.isTokenExpired(token);
   }
 }
