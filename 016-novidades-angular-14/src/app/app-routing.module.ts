@@ -4,8 +4,8 @@ import { HomeComponent } from './pages/components/home/home.component';
 import { SobreComponent } from './pages/components/sobre/sobre.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'sobre', component: SobreComponent },
+  { path: '', component: HomeComponent, title: 'Página Home' },
+  { path: 'sobre', component: SobreComponent, title: 'Página Sobre' },
 ];
 
 @NgModule({
