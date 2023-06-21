@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { getRouteParams } from 'src/app/helpers/get-route-params';
 
 @Component({
   selector: 'app-sobre',
@@ -15,9 +16,12 @@ export class SobreComponent implements OnInit {
     password: [''],
   });
 
+  public id = getRouteParams('id');
+
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     console.log(this.form.value.email);
+    console.log(this.id);
   }
 }
